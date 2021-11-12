@@ -1,0 +1,17 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+['<S-Tab>'] 	lua/plugins/cmp-nvim.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
+['<Tab>'] 	lua/plugins/cmp-nvim.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
+['[M'] 	lua/plugins/nvim-treesitter.lua	/^        ['[M'] = '@function.outer',$/;"	f
+['[m'] 	lua/plugins/nvim-treesitter.lua	/^        ['[m'] = '@function.outer',$/;"	f
+[']M'] 	lua/plugins/nvim-treesitter.lua	/^        [']M'] = '@function.outer',$/;"	f
+[']m'] 	lua/plugins/nvim-treesitter.lua	/^        [']m'] = '@function.outer',$/;"	f
+['af'] 	lua/plugins/nvim-treesitter.lua	/^        ['af'] = '@function.outer',$/;"	f
+['if'] 	lua/plugins/nvim-treesitter.lua	/^        ['if'] = '@function.inner',$/;"	f
+component_function 	lua/config.lua	/^  component_function = { gitbranch = 'fugitive#head' },$/;"	f
+expand 	lua/plugins/cmp-nvim.lua	/^    expand = function(args)$/;"	f
+local on_attach 	lua/lsp-settings.lua	/^local on_attach = function(_, bufnr)$/;"	f

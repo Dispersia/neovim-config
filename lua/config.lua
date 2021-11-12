@@ -46,7 +46,7 @@ vim.api.nvim_exec(
   [[
   augroup AutoLSP
     autocmd!
-    autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+    autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics({ focusable = false })
   augroup end
   ]],
   false
