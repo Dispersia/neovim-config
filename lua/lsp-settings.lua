@@ -36,18 +36,18 @@ for _, lsp in ipairs(servers) do
 end
 
 require('rust-tools').setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  server = {
-    tools = {
-      autoSetHints = true,
-      hover_with_actions = true,
-      inlay_hints = {
-        show_parameter_hints = false,
-	parameter_hitns_prefix = "",
-	other_hints_prefix = "",
-      },
+  tools = {
+    autoSetHints = true,
+    hover_with_actions = true,
+    inlay_hints = {
+      show_parameter_hints = false,
+      parameter_hitns_prefix = "",
+      other_hints_prefix = "",
     },
+  },
+  server = {
+    on_attach = on_attach,
+    capabilities = capabilities,
     settings = {
       ["rust-analyzer"] = {
         assist = {
