@@ -14,5 +14,4 @@
 ['if'] 	lua/plugins/nvim-treesitter.lua	/^        ['if'] = '@function.inner',$/;"	f
 component_function 	lua/config.lua	/^  component_function = { gitbranch = 'fugitive#head' },$/;"	f
 expand 	lua/plugins/cmp-nvim.lua	/^    expand = function(args)$/;"	f
-local on_attach 	lua/lsp-settings.lua	/^local on_attach = function(_, bufnr)$/;"	f
 on_attach 	lua/plugins/dotnet.lua	/^  on_attach = function(_, bufnr)$/;"	f
