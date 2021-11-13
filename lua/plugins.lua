@@ -46,4 +46,4 @@ require 'plugins.gitsigns'
 require 'plugins.telescope'
 require 'plugins.nvim-treesitter'
 require 'plugins.cmp-nvim'
-
+require 'plugins.dotnet'
