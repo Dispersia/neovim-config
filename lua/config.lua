@@ -1,7 +1,6 @@
 vim.o.inccommand = 'nosplit'
 vim.o.hlsearch = false
 vim.o.hidden = true
-vim.o.mouse = 'a'
 vim.o.breakindent = true
 vim.opt.undofile = true
 vim.o.ignorecase = true
