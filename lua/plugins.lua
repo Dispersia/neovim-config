@@ -41,6 +41,7 @@ require('packer').startup(function()
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'junegunn/fzf.vim'
   use { 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'akinsho/flutter-tools.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 end)
 
 require 'plugins.gitsigns'
@@ -50,4 +51,5 @@ require 'plugins.cmp-nvim'
 require 'plugins.rust'
 require 'plugins.dotnet'
 require 'plugins.scala'
+require 'plugins.flutter'
 
