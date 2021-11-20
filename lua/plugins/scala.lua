@@ -17,7 +17,7 @@ vim.api.nvim_exec(
     autocmd!
     autocmd FileType scala setlocal omnifunc=v:lua.vim.lsp.omnifunc
     autocmd FileType scala,sbt lua require("metals").initialize_or_attach(metals_config)
-    autocmd FileType scala,sbt nnoremap <silent> <buffer> <C-B> :!sbt build<CR>
+    autocmd FileType scala,sbt nnoremap <silent> <buffer> <C-T> :!sbt test<CR>
     autocmd FileType scala,sbt nnoremap <silent> <buffer> <C-R> :!sbt run<CR>
   augroup end
   ]],
