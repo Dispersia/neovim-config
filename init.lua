@@ -1,4 +1,3 @@
-require 'plugins'
-require 'config'
-require 'lsp-settings'
+require('config')
+require('plugins')
 

@@ -1,4 +1,5 @@
-local nvim_lsp = require 'lspconfig'
+local nvim_lsp = require('lspconfig')
+local lsp_settings = require('plugins.languages.settings')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
@@ -15,6 +16,7 @@ require('rust-tools').setup({
   },
   server = {
     capabilities = capabilities,
+    on_attach = lsp_settings.on_attach,
     flags = {
       debounce_text_changes = 250,
     },
@@ -37,5 +39,4 @@ require('rust-tools').setup({
     },
   }
 })
-
 

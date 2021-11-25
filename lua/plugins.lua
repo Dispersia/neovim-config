@@ -47,15 +47,9 @@ require('packer').startup(function()
   use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = { 'nvim-lua/plenary.nvim' } }
 end)
 
-require 'plugins.gitsigns'
-require 'plugins.telescope'
-require 'plugins.nvim-treesitter'
-require 'plugins.cmp-nvim'
-require 'plugins.rust'
-require 'plugins.dotnet'
-require 'plugins.scala'
-require 'plugins.flutter'
-require 'plugins.typescript'
-require 'plugins.css'
-require 'plugins.html'
+require('plugins.cmp-nvim')
+require('plugins.gitsigns')
+require('plugins.languages')
+require('plugins.nvim-treesitter')
+require('plugins.telescope')
 

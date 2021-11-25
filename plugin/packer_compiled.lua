@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["fzf.vim"] = {
     loaded = true,
     path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/fzf.vim",
@@ -129,15 +134,30 @@ _G.packer_plugins = {
     path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
     url = "https://github.com/Xuyuanp/nerdtree-git-plugin"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-lsp-ts-utils"] = {
+    loaded = true,
+    path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/nvim-lsp-ts-utils",
+    url = "https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-metals"] = {
+    loaded = true,
+    path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/nvim-metals",
+    url = "https://github.com/scalameta/nvim-metals"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -168,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
+  },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/home/dispersia/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/iron-e/rust.vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
