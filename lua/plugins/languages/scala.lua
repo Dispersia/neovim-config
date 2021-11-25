@@ -1,4 +1,4 @@
-local metals_config = require('metals').bare_config()
+metals_config = require('metals').bare_config()
 
 local lsp_settings = require('plugins.languages.settings')
 
