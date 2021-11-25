@@ -15,13 +15,13 @@ vim.o.shiftwidth=2
 vim.o.softtabstop=2
 
 vim.g.onedark_terminal_italics = 2
+
 vim.g.lightline = {
   colorscheme = 'onedark',
   active = { left = { { 'mode', 'paste' }, { 'gitbranch', 'readonly', 'filename', 'modified' } } },
   component_function = { gitbranch = 'fugitive#head' },
 }
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+
 vim.g.indent_blankline_char = '┊'
 vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
 vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
