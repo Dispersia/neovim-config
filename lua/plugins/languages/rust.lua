@@ -12,7 +12,7 @@ require('rust-tools').setup({
     },
   },
   server = {
-    capabilities = require('lsp-status').capabilities,
+    capabilities = lsp_settings.Capabilities,
     on_attach = lsp_settings.on_attach,
     flags = {
       debounce_text_changes = 250,

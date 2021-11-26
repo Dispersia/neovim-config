@@ -1,11 +1,8 @@
 local nvim_lspconfig = require('lspconfig')
 local lsp_settings = require('plugins.languages.settings')
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-
 nvim_lspconfig.tsserver.setup({
-  capabilities = capabilities,
+  capabilities = lsp_settings.Capabilities,
   on_attach = function(client, bufnr)
     local ts_utils = require('nvim-lsp-ts-utils')
 
