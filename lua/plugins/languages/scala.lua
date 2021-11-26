@@ -2,15 +2,12 @@ metals_config = require('metals').bare_config()
 
 local lsp_settings = require('plugins.languages.settings')
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
 metals_config.settings = {
     showImplicitArguments = true,
     excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
 }
 
-metals_config.capabilities = capabilities
+metals_config.capabilities = lsp_settings.Capabilities
 metals_config.on_attach = lsp_settings.on_attach
 metals_config.init_options.statusBarProvider = "on"
 

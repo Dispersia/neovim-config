@@ -54,7 +54,7 @@ gls.left[1] = {
       vim.api.nvim_command('hi GalaxyViMode guibg=' .. mode_color())
       local alias_mode = alias[vim.fn.mode()]
       if alias_mode == nil then alias_mode = vim.fn.mode() end
-      return " " .. alias_mode .. " "
+      return "  " .. alias_mode .. " "
     end,
     highlight = {colors.bg, colors.bg},
     separator = " ",
@@ -74,7 +74,7 @@ gls.left[3] = {
   FileName = {
     provider = 'FileName',
     highlight = {colors.fg, colors.section_bg},
-    separator = " ",
+    separator = " ",
     separator_highlight = {colors.section_bg, colors.bg}
   }
 }
@@ -125,7 +125,7 @@ gls.left[8] = {
 }
 gls.left[9] = {
   LeftEnd = {
-    provider = function() return ' ' end,
+    provider = function() return ' ' end,
     highlight = {colors.section_bg, colors.bg}
   }
 }
@@ -133,20 +133,20 @@ gls.left[10] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     icon = '  ',
-    highlight = {colors.red, colors.section_bg}
+    highlight = {colors.red, colors.bg}
   }
 }
 gls.left[11] = {
   Space = {
     provider = function() return ' ' end,
-    highlight = {colors.section_bg, colors.section_bg}
+    highlight = {colors.section_bg, colors.bg}
   }
 }
 gls.left[12] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
-    highlight = {colors.orange, colors.section_bg}
+    highlight = {colors.orange, colors.bg}
   }
 }
 gls.left[13] = {
@@ -154,22 +154,21 @@ gls.left[13] = {
     provider = 'DiagnosticHint',
     icon = '  ',
 
-    highlight = {colors.fg, colors.section_bg}
+    highlight = {colors.fg, colors.bg}
   }
 }
-
 gls.left[14] = {
   Space = {
     provider = function() return ' ' end,
-    highlight = {colors.section_bg, colors.section_bg}
+    highlight = {colors.section_bg, colors.bg}
   }
 }
 gls.left[15] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = '  ',
-    highlight = {colors.blue, colors.section_bg},
-    separator = ' ',
+    highlight = {colors.blue, colors.bg},
+    separator = ' ',
     separator_highlight = {colors.section_bg, colors.bg}
   }
 }
@@ -178,9 +177,9 @@ gls.left[16] = {
     provider = function()
       return lspclient.get_lsp_client('')
     end,
-    highlight = {colors.section_bg, colors.section_bg},
-    separator = ' ',
-    separator_highlight = {colors.section_bg, colors.bg}
+    highlight = {colors.fg, colors.bg},
+    separator = ' ',
+    separator_highlight = {colors.fg, colors.bg}
   }
 }
 
@@ -189,8 +188,8 @@ gls.right[1] = {
   FileFormat = {
     provider = function() return vim.bo.filetype end,
     highlight = {colors.fg, colors.section_bg},
-    separator = ' ',
-    separator_highlight = {colors.section_bg, colors.bg}
+    separator = ' ',
+    separator_highlight = {colors.fg, colors.bg}
 
   }
 }
@@ -218,7 +217,7 @@ gls.short_line_left[1] = {
   BufferType = {
     provider = 'FileTypeName',
     highlight = {colors.fg, colors.section_bg},
-    separator = ' ',
+    separator = ' ',
     separator_highlight = {colors.section_bg, colors.bg}
   }
 }
@@ -227,7 +226,7 @@ gls.short_line_right[1] = {
   BufferIcon = {
     provider = 'BufferIcon',
     highlight = {colors.yellow, colors.section_bg},
-    separator = ' ',
+    separator = ' ',
     separator_highlight = {colors.section_bg, colors.bg}
   }
 }
