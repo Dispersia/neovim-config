@@ -44,7 +44,7 @@ require('packer').startup(function()
   use { 'iron-e/rust.vim', branch = 'feature/struct-definition-identifiers' }
   use 'jose-elias-alvarez/null-ls.nvim'
   use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = { 'nvim-lua/plenary.nvim' } }
-  use 'nvim-lua/lsp-status.nvim'
+  use 'dispersia/lsp-status.nvim'
   use { 'NTBBloodbath/galaxyline.nvim', requires = { 'smiteshp/nvim-gps', 'kyazdani42/nvim-web-devicons' } }
 end)
 

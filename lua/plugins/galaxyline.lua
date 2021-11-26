@@ -182,6 +182,16 @@ gls.left[16] = {
     separator_highlight = {colors.fg, colors.bg}
   }
 }
+gls.left[17] = {
+  ShowLspStatus = {
+    provider = function()
+      return require('lsp-status').status()
+    end,
+    highlight = { colors.fg, colors.bg},
+    seperator = ' ',
+    seperator_highlight = {colors.fg, colors.bg}
+  }
+}
 
 -- Right side
 gls.right[1] = {
