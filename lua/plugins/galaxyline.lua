@@ -126,7 +126,7 @@ gls.left[8] = {
 gls.left[9] = {
   LeftEnd = {
     provider = function() return ' ' end,
-    highlight = {colors.section_bg, colors.bg}
+    highlight = {colors.fg, colors.bg}
   }
 }
 gls.left[10] = {
@@ -139,7 +139,7 @@ gls.left[10] = {
 gls.left[11] = {
   Space = {
     provider = function() return ' ' end,
-    highlight = {colors.section_bg, colors.bg}
+    highlight = {colors.fg, colors.bg}
   }
 }
 gls.left[12] = {
@@ -160,7 +160,7 @@ gls.left[13] = {
 gls.left[14] = {
   Space = {
     provider = function() return ' ' end,
-    highlight = {colors.section_bg, colors.bg}
+    highlight = {colors.fg, colors.bg}
   }
 }
 gls.left[15] = {
@@ -187,47 +187,28 @@ gls.left[16] = {
 gls.right[1] = {
   FileFormat = {
     provider = function() return vim.bo.filetype end,
-    highlight = {colors.fg, colors.section_bg},
+    highlight = {colors.fg, colors.bg},
     separator = ' ',
     separator_highlight = {colors.fg, colors.bg}
 
   }
 }
--- gls.right[2] = {
---   LineInfo = {
---     provider = 'LineColumn',
---     highlight = { colors.fg, colors.section_bg },
 
---     separator = ' | ',
---     separator_highlight = { colors.bg, colors.section_bg },
---   },
--- }
--- gls.right[3] = {
---   Heart = {
---     provider = function() return ' ' end,
---     highlight = { colors.red, colors.section_bg },
---     separator = ' | ',
---     separator_highlight = { colors.bg, colors.section_bg },
---   }
-
--- }
-
--- Short status line
 gls.short_line_left[1] = {
   BufferType = {
     provider = 'FileTypeName',
-    highlight = {colors.fg, colors.section_bg},
+    highlight = {colors.fg, colors.bg},
     separator = ' ',
-    separator_highlight = {colors.section_bg, colors.bg}
+    separator_highlight = {colors.fg, colors.bg}
   }
 }
 
 gls.short_line_right[1] = {
   BufferIcon = {
     provider = 'BufferIcon',
-    highlight = {colors.yellow, colors.section_bg},
+    highlight = {colors.yellow, colors.bg},
     separator = ' ',
-    separator_highlight = {colors.section_bg, colors.bg}
+    separator_highlight = {colors.bg, colors.bg}
   }
 }
 
