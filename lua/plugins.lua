@@ -23,7 +23,6 @@ require('packer').startup(function()
   use 'ludovicchabant/vim-gutentags'
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use 'joshdick/onedark.vim'
-  use 'itchyny/lightline.vim'
   use 'lukas-reineke/indent-blankline.nvim'
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use 'nvim-treesitter/nvim-treesitter'
@@ -45,9 +44,14 @@ require('packer').startup(function()
   use { 'iron-e/rust.vim', branch = 'feature/struct-definition-identifiers' }
   use 'jose-elias-alvarez/null-ls.nvim'
   use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = { 'nvim-lua/plenary.nvim' } }
+  use 'nvim-lua/lsp-status.nvim'
+  use { 'NTBBloodbath/galaxyline.nvim', requires = { 'smiteshp/nvim-gps', 'kyazdani42/nvim-web-devicons' } }
 end)
 
+require('lsp-status').register_progress()
+
 require('plugins.cmp-nvim')
+require('plugins.galaxyline')
 require('plugins.gitsigns')
 require('plugins.languages')
 require('plugins.nvim-treesitter')

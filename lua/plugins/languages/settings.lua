@@ -1,6 +1,9 @@
 local LSPSettings = {}
+local lsp_status = require('lsp-status')
 
 function LSPSettings.on_attach(client, bufnr)
+  lsp_status.on_attach(client)
+
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -28,6 +31,12 @@ function LSPSettings.on_attach(client, bufnr)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   buf_set_keymap('n', '<space>so', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], opts)
 end
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = vim.tbl_extend('keep', capabilities, require('cmp_nvim_lsp').update_capabilities(capabilities))
+capabilities = vim.tbl_extend('keep', capabilities, lsp_status.capabilities)
+
+LSPSettings["Capabilities"] = capabilities
 
 return LSPSettings
 

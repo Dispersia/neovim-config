@@ -1,11 +1,8 @@
 local nvim_lsp = require('lspconfig')
 local lsp_settings = require('plugins.languages.settings')
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-
 nvim_lsp.omnisharp.setup {
-  capabilities = capabilities,
+  capabilities = lsp_settings.Capabilities,
   on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
