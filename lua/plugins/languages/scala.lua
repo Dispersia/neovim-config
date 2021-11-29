@@ -8,7 +8,16 @@ metals_config.settings = {
 }
 
 metals_config.capabilities = lsp_settings.Capabilities
-metals_config.on_attach = lsp_settings.on_attach
+metals_config.on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
+  local opts = { noremap = true, silent = true }
+
+  buf_set_keymap('n', '<leader>ct', ':!sbt test<CR>', opts)
+  buf_set_keymap('n', '<leader>cr', ':!sbt run<CR>', opts)
+
+  lsp_settings.on_attach(client, bufnr)
+end
 metals_config.init_options.statusBarProvider = "on"
 
 vim.api.nvim_exec(
@@ -17,8 +26,6 @@ vim.api.nvim_exec(
     autocmd!
     autocmd FileType scala setlocal omnifunc=v:lua.vim.lsp.omnifunc
     autocmd FileType scala,sbt lua require("metals").initialize_or_attach(metals_config)
-    autocmd FileType scala,sbt nnoremap <silent> <buffer> <C-T> :!sbt test<CR>
-    autocmd FileType scala,sbt nnoremap <silent> <buffer> <C-R> :!sbt run<CR>
   augroup end
   ]],
   false
