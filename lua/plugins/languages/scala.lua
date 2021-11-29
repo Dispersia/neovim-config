@@ -15,6 +15,7 @@ metals_config.on_attach = function(client, bufnr)
 
   buf_set_keymap('n', '<leader>ct', ':!sbt test<CR>', opts)
   buf_set_keymap('n', '<leader>cr', ':!sbt run<CR>', opts)
+  buf_set_keymap('n', '<leader>cw', ':!cs launch ammonite --scala 2.13 -- %<CR>', opts)
 
   lsp_settings.on_attach(client, bufnr)
 end
