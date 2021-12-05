@@ -21,6 +21,7 @@ require('rust-tools').setup({
       buf_set_keymap('n', '<leader>ct', ':!cargo test<CR>', opts)
       buf_set_keymap('n', '<leader>cb', ':!cargo build<CR>', opts)
       buf_set_keymap('n', '<leader>cr', ':!cargo run<CR>', opts)
+      buf_set_keymap('n', '<leader>cf', ':!cargo fmt<CR>', opts)
 
       lsp_settings.on_attach(client, bufnr)
     end,

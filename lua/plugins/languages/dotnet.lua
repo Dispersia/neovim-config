@@ -8,7 +8,8 @@ nvim_lsp.omnisharp.setup {
 
     local opts = { noremap = true, silent = true }
 
-    buf_set_keymap('n', '<space>R', '<cmd>dotnet run<CR>', opts)
+    buf_set_keymap('n', '<leader>cr', ':!dotnet run<CR>', opts)
+    buf_set_keymap('n', '<leader>cf', ':!dotnet format --include %<CR>', opts)
 
     lsp_settings.on_attach(client, bufnr)
   end,
