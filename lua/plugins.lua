@@ -41,7 +41,7 @@ require('packer').startup(function()
   use 'junegunn/fzf.vim'
   use { 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'akinsho/flutter-tools.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use 'reisub0/hot-reload.vim'
+  use 'thosakwe/vim-flutter'
   use 'dart-lang/dart-vim-plugin'
   use { 'iron-e/rust.vim', branch = 'feature/struct-definition-identifiers' }
   use 'jose-elias-alvarez/null-ls.nvim'
