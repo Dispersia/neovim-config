@@ -1,6 +1,6 @@
 local gl = require('galaxyline')
 local condition = require('galaxyline.condition')
-local lspclient = require('galaxyline.providers.lsp')
+local lspclient = require('galaxyline.provider_lsp')
 
 require('nvim-web-devicons').setup {default = true}
 
@@ -65,7 +65,7 @@ gls.left[2] = {
   FileIcon = {
     provider = 'FileIcon',
     highlight = {
-      require('galaxyline.providers.fileinfo').get_file_icon_color,
+      require('galaxyline.provider_fileinfo').get_file_icon_color,
       colors.section_bg
     }
   }
@@ -88,7 +88,7 @@ gls.left[4] = {
 gls.left[5] = {
   GitBranch = {
     provider = function()
-      local vcs = require('galaxyline.providers.vcs')
+      local vcs = require('galaxyline.provider_vcs')
       local branch_name = vcs.get_git_branch()
       if (string.len(branch_name) > 28) then
         return string.sub(branch_name, 1, 25) .. "..."

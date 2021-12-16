@@ -9,5 +9,5 @@ nvim_lsp.pyright.setup {
     local opts = { noremap = true, silent = true }
 
     lsp_settings.on_attach(client, bufnr)
-  end,
+  end
 }

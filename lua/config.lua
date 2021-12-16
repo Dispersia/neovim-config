@@ -18,6 +18,9 @@ vim.g.onedark_terminal_italics = 2
 
 vim.g.autochdir = true
 
+vim.g.python3_host_prog = '/home/dispersia/miniconda3/envs/directml/bin/python'
+vim.g.python_host_prog = '/home/dispersia/miniconda3/envs/directml/bin/python'
+
 vim.g.indent_blankline_char = '┊'
 vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
 vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }

@@ -41,11 +41,13 @@ require('packer').startup(function()
   use 'junegunn/fzf.vim'
   use { 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'akinsho/flutter-tools.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use 'reisub0/hot-reload.vim'
+  use 'dart-lang/dart-vim-plugin'
   use { 'iron-e/rust.vim', branch = 'feature/struct-definition-identifiers' }
   use 'jose-elias-alvarez/null-ls.nvim'
   use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = { 'nvim-lua/plenary.nvim' } }
   use 'dispersia/lsp-status.nvim'
-  use { 'NTBBloodbath/galaxyline.nvim', requires = { 'smiteshp/nvim-gps', 'kyazdani42/nvim-web-devicons' } }
+  use { 'dispersia/galaxyline.nvim', requires = { 'smiteshp/nvim-gps', 'kyazdani42/nvim-web-devicons' } }
 end)
 
 require('lsp-status').register_progress()
