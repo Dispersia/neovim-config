@@ -44,7 +44,7 @@ require('packer').startup(function()
   use 'thosakwe/vim-flutter'
   use 'dart-lang/dart-vim-plugin'
   use { 'iron-e/rust.vim', branch = 'feature/struct-definition-identifiers' }
-  use 'jose-elias-alvarez/null-ls.nvim'
+--  use 'jose-elias-alvarez/null-ls.nvim'
   use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = { 'nvim-lua/plenary.nvim' } }
   use 'dispersia/lsp-status.nvim'
   use { 'dispersia/galaxyline.nvim', requires = { 'smiteshp/nvim-gps', 'kyazdani42/nvim-web-devicons' } }

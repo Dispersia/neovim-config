@@ -43,6 +43,9 @@ require('rust-tools').setup({
         procMacro = {
           enable = true
         },
+        diagnostics = {
+          disabled = { "unresolved-proc-macro" }
+        },
       },
     },
   }
