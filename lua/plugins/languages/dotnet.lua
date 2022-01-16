@@ -13,6 +13,6 @@ nvim_lsp.omnisharp.setup {
 
     lsp_settings.on_attach(client, bufnr)
   end,
-  cmd = { "/home/dispersia/programs/omnisharp-server/run", "--languageserver", "--hostPID", tostring(pid) },
+  cmd = { "omnisharp-server", "--languageserver", "--hostPID", tostring(pid) },
 }
 

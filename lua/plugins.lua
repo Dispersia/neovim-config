@@ -20,7 +20,7 @@ require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-commentary'
-  use 'ludovicchabant/vim-gutentags'
+--  use 'ludovicchabant/vim-gutentags'
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use 'joshdick/onedark.vim'
   use 'lukas-reineke/indent-blankline.nvim'

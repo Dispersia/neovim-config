@@ -23,6 +23,15 @@ require('rust-tools').setup({
       buf_set_keymap('n', '<leader>cr', ':!cargo run<CR>', opts)
       buf_set_keymap('n', '<leader>cf', ':!cargo fmt<CR>', opts)
 
+      vim.api.nvim_exec(
+        [[
+        augroup AutoFmt
+          autocmd!
+          autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)
+        ]],
+        false
+      )
+
       lsp_settings.on_attach(client, bufnr)
     end,
     flags = {
