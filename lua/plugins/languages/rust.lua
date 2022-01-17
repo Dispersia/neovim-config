@@ -28,6 +28,16 @@ require('rust-tools').setup({
         augroup AutoFmt
           autocmd!
           autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)
+        augroup end
+        ]],
+        false
+      )
+
+      vim.api.nvim_exec(
+        [[
+        augroup CargoUpdate
+          autocmd BufRead Cargo.toml call crates#toggle()
+        augroup end
         ]],
         false
       )

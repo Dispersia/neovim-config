@@ -54,5 +54,13 @@ vim.api.nvim_exec(
   ]],
   false
 )
+vim.api.nvim_exec(
+  [[
+  augroup AutoSaveOnInsertLeave
+    autocmd InsertLeave * :w
+  augroup end
+  ]],
+  false
+)
 vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
 

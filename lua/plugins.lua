@@ -48,6 +48,8 @@ require('packer').startup(function()
   use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = { 'nvim-lua/plenary.nvim' } }
   use 'dispersia/lsp-status.nvim'
   use { 'dispersia/galaxyline.nvim', requires = { 'smiteshp/nvim-gps', 'kyazdani42/nvim-web-devicons' } }
+  use 'ryanoasis/vim-devicons'
+  use 'mhinz/vim-crates'
 end)
 
 require('lsp-status').register_progress()
