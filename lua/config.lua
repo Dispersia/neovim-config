@@ -57,7 +57,7 @@ vim.api.nvim_exec(
 vim.api.nvim_exec(
   [[
   augroup AutoSaveOnInsertLeave
-    autocmd InsertLeave * :w
+    autocmd InsertLeave * ++nested update
   augroup end
   ]],
   false
